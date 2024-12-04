@@ -100,7 +100,7 @@ function saveQuizResult(score) {
   localStorage.setItem("quizResults", JSON.stringify(results));
 
   // Redirect to results page
-  window.location.href = "results.html";
+  // window.location.href = "results.html";
 }
 
 // adding Event Listener to start btn
