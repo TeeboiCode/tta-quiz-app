@@ -187,215 +187,231 @@ function startCountDown() {
 // HTML
 
 const quizQuestions = [
-  // Variables (var, let, const)
+  // Null and Undefined (7 Questions)
   {
     id: 1,
+    question: "What does 'null' represent in JavaScript?",
+    options: [
+      "An empty string",
+      "A non-existent or invalid value",
+      "Undefined",
+      "Zero",
+    ],
+    correct: "A non-existent or invalid value",
+  },
+  {
+    id: 2,
+    question: "What is the type of 'null' in JavaScript?",
+    options: ["null", "undefined", "object", "string"],
+    correct: "object",
+  },
+  {
+    id: 3,
+    question: "What does 'undefined' mean in JavaScript?",
+    options: [
+      "A declared but uninitialized variable",
+      "An error",
+      "A null value",
+      "A string",
+    ],
+    correct: "A declared but uninitialized variable",
+  },
+  {
+    id: 4,
+    question: "What is the result of 'typeof undefined'?",
+    options: ["null", "undefined", "object", "string"],
+    correct: "undefined",
+  },
+  {
+    id: 5,
+    question: "Which of these values is falsy?",
+    options: ["null", "undefined", "all", "Neither"],
+    correct: "all",
+  },
+  {
+    id: 6,
+    question: "What happens when you compare null and undefined with '=='?",
+    options: [
+      "They are equal",
+      "They are not equal",
+      "It throws an error",
+      "They are strictly equal",
+    ],
+    correct: "They are equal",
+  },
+  {
+    id: 7,
+    question: "What is the strict comparison result of null === undefined?",
+    options: ["true", "false", "null", "undefined"],
+    correct: "false",
+  },
+
+  // Scope (Global, Block, Function Scope) (8 Questions)
+  {
+    id: 8,
+    question: "Which keyword declares a block-scoped variable?",
+    options: ["var", "let", "const", "Both let and const"],
+    correct: "Both let and const",
+  },
+  {
+    id: 9,
+    question: "Which variables are accessible globally?",
+    options: [
+      "Variables declared with var",
+      "Variables declared with let",
+      "Variables declared inside a function",
+      "All variables",
+    ],
+    correct: "Variables declared with var",
+  },
+  {
+    id: 10,
+    question: "What is function scope?",
+    options: [
+      "Variables declared inside a function are accessible only inside it",
+      "Variables can be accessed globally",
+      "Only const variables are function scoped",
+      "Variables declared inside loops",
+    ],
+    correct:
+      "Variables declared inside a function are accessible only inside it",
+  },
+  {
+    id: 11,
+    question: "What happens when a variable is declared without any keyword?",
+    options: [
+      "It becomes a global variable",
+      "It throws an error",
+      "It is block-scoped",
+      "It is undefined",
+    ],
+    correct: "It becomes a global variable",
+  },
+  {
+    id: 12,
+    question:
+      "Which keyword is used to define a variable with a global scope inside a function?",
+    options: ["var", "let", "const", "None"],
+    correct: "var",
+  },
+  {
+    id: 13,
+    question: "What is the scope of variables declared using 'let'?",
+    options: ["Function scope", "Block scope", "Global scope", "None"],
+    correct: "Block scope",
+  },
+  {
+    id: 14,
+    question: "Can a variable declared with 'const' be reassigned?",
+    options: ["Yes", "No", "Only if it's a string", "Only in a block"],
+    correct: "No",
+  },
+  {
+    id: 15,
+    question: "What is the scope of a 'var' variable?",
+    options: [
+      "Global or function scope",
+      "Block scope",
+      "Only within loops",
+      "None",
+    ],
+    correct: "Global or function scope",
+  },
+
+  // Boolean (10 Questions)
+  {
+    id: 16,
+    question: "What is the Boolean value of an empty string?",
+    options: ["true", "false", "null", "undefined"],
+    correct: "false",
+  },
+  {
+    id: 17,
+    question: "What does Boolean(0) return?",
+    options: ["true", "false", "null", "undefined"],
+    correct: "false",
+  },
+  {
+    id: 18,
+    question: "What is the Boolean value of 'false' == '0'?",
+    options: ["true", "false", "null", "undefined"],
+    correct: "true",
+  },
+  {
+    id: 19,
+    question: "Which of these values is truthy?",
+    options: ["0", "false", "'false'", "null"],
+    correct: "'false'",
+  },
+  {
+    id: 20,
+    question: "Which of these evaluates to false?",
+    options: ["null", "undefined", "NaN", "All of the above"],
+    correct: "All of the above",
+  },
+  {
+    id: 21,
+    question: "What is the result of Boolean([])?",
+    options: ["true", "false", "undefined", "null"],
+    correct: "true",
+  },
+  {
+    id: 22,
+    question: "What is the result of 'true && false'?",
+    options: ["true", "false", "null", "undefined"],
+    correct: "false",
+  },
+  {
+    id: 23,
+    question: "What is the result of 'false || true'?",
+    options: ["true", "false", "null", "undefined"],
+    correct: "true",
+  },
+  {
+    id: 24,
+    question: "Which logical operator returns true if both operands are true?",
+    options: ["&&", "||", "!", "None"],
+    correct: "&&",
+  },
+  {
+    id: 25,
+    question: "Which logical operator negates a Boolean value?",
+    options: ["&&", "||", "!", "??"],
+    correct: "!",
+  },
+
+  // Variables (5 Questions)
+  {
+    id: 26,
     question: "Which keyword should be used to declare a constant variable?",
     options: ["var", "let", "const", "None of the above"],
     correct: "const",
   },
   {
-    id: 2,
+    id: 27,
     question: "Which keyword allows you to reassign values to a variable?",
     options: ["var", "let", "const", "Both var and let"],
     correct: "Both var and let",
   },
   {
-    id: 3,
-    question: "What happens if you redeclare a 'let' variable in the same scope?",
-    options: [
-      "It throws an error",
-      "It overwrites the previous value",
-      "It creates a new variable",
-      "It is allowed in strict mode",
-    ],
-    correct: "It throws an error",
-  },
-  {
-    id: 4,
-    question: "Which variable declaration is function-scoped?",
-    options: ["var", "let", "const", "None of the above"],
-    correct: "var",
-  },
-  {
-    id: 5,
-    question: "Which variable declaration is block-scoped?",
-    options: ["var", "let", "const", "Both let and const"],
-    correct: "Both let and const",
-  },
-  {
-    id: 6,
-    question: "Which keyword was introduced in ES6 to declare variables?",
-    options: ["var", "let", "const", "Both let and const"],
-    correct: "Both let and const",
-  },
-  {
-    id: 7,
-    question: "Which of the following can be reassigned a new value?",
-    options: ["var", "let", "const", "Both var and let"],
-    correct: "Both var and let",
-  },
-  {
-    id: 8,
-    question: "What will happen if you try to change a 'const' variable's value?",
-    options: [
-      "It will throw an error",
-      "It will change the value",
-      "It will create a new variable",
-      "It will delete the variable",
-    ],
-    correct: "It will throw an error",
-  },
-  {
-    id: 9,
-    question: "Which variable declaration allows hoisting but initializes with 'undefined'?",
-    options: ["var", "let", "const", "None of the above"],
-    correct: "var",
-  },
-  {
-    id: 10,
-    question: "Which variable declaration is best for immutable values?",
-    options: ["var", "let", "const", "None of the above"],
-    correct: "const",
-  },
-
-  // Scope
-  {
-    id: 11,
-    question: "Which type of scope does 'var' have?",
-    options: ["Global", "Function", "Block", "Both Global and Function"],
-    correct: "Both Global and Function",
-  },
-  {
-    id: 12,
-    question: "Which variables are block-scoped?",
-    options: ["var", "let", "const", "Both let and const"],
-    correct: "Both let and const",
-  },
-  {
-    id: 13,
-    question: "What happens if you access a variable before declaring it using 'let'?",
-    options: [
-      "It will be undefined",
-      "It will throw an error",
-      "It will return null",
-      "It will work fine",
-    ],
-    correct: "It will throw an error",
-  },
-  {
-    id: 14,
-    question: "What is the scope of a 'const' variable?",
-    options: ["Global", "Function", "Block", "All of the above"],
-    correct: "Block",
-  },
-  {
-    id: 15,
-    question: "Which of the following will NOT be accessible outside a function?",
-    options: ["var", "let", "const", "Function-declared variables"],
-    correct: "Function-declared variables",
-  },
-
-  // Primitive Data Types (Strings & Numbers)
-  {
-    id: 16,
-    question: "Which symbol is used for string concatenation in JavaScript?",
-    options: ["+", "&", "%", "$"],
-    correct: "+",
-  },
-  {
-    id: 17,
-    question: "How do you escape a double quote inside a string?",
-    options: [
-      "Using a backslash (\\)",
-      "Using single quotes",
-      "Using curly braces",
-      "You cannot escape it",
-    ],
-    correct: "Using a backslash (\\)",
-  },
-  {
-    id: 18,
-    question: "Which property is used to find the length of a string?",
-    options: ["size", "length", "count", "index"],
-    correct: "length",
-  },
-  {
-    id: 19,
-    question: "What will be the output of 'Hello'.length?",
-    options: ["4", "5", "6", "Undefined"],
-    correct: "5",
-  },
-  {
-    id: 20,
-    question: "How can you get the first character of a string?",
-    options: ["string[0]", "string.charAt(0)", "Both A and B", "None of the above"],
-    correct: "Both A and B",
-  },
-  {
-    id: 21,
-    question: "What is the result of 10 % 3?",
-    options: ["1", "3", "0", "10"],
-    correct: "1",
-  },
-  {
-    id: 22,
-    question: "What will '5' + 3 return?",
-    options: ["53", "8", "Error", "undefined"],
-    correct: "53",
-  },
-  {
-    id: 23,
-    question: "What will '5' - 3 return?",
-    options: ["2", "53", "Error", "undefined"],
-    correct: "2",
-  },
-  {
-    id: 24,
-    question: "Which method is used to convert a string to a number?",
-    options: ["parseInt()", "toNumber()", "convert()", "parseFloat()"],
-    correct: "parseInt()",
-  },
-  {
-    id: 25,
-    question: "Which function returns the highest value from a list of numbers?",
-    options: ["Math.max()", "Math.min()", "Math.ceil()", "Math.floor()"],
-    correct: "Math.max()",
-  },
-  {
-    id: 26,
-    question: "What is the output of Math.floor(4.9)?",
-    options: ["4", "5", "4.9", "Undefined"],
-    correct: "4",
-  },
-  {
-    id: 27,
-    question: "What will 'Hello'.indexOf('e') return?",
-    options: ["1", "2", "-1", "0"],
-    correct: "1",
-  },
-  {
     id: 28,
-    question: "What will 'Hello'.indexOf('x') return?",
-    options: ["1", "-1", "0", "Error"],
-    correct: "-1",
+    question: "What is the default value of an uninitialized variable?",
+    options: ["null", "undefined", "0", "NaN"],
+    correct: "undefined",
   },
   {
     id: 29,
-    question: "What is the result of Math.ceil(4.1)?",
-    options: ["4", "5", "4.5", "4.1"],
-    correct: "5",
+    question: "Which variable declaration is preferred for block scope?",
+    options: ["var", "let", "const", "Both let and const"],
+    correct: "Both let and const",
   },
   {
     id: 30,
-    question: "Which method is used to find a character at a specific index in a string?",
-    options: ["charAt()", "charIndex()", "getChar()", "indexOf()"],
-    correct: "charAt()",
-  }
+    question: "Which keyword is function-scoped by default?",
+    options: ["var", "let", "const", "None"],
+    correct: "var",
+  },
 ];
-
-
-
 
 let remainingQuestion = [...quizQuestions];
 // console.log(remainingQuestion);
