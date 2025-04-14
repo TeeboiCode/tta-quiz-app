@@ -297,3 +297,82 @@ const quizQuestions = [
     correct: "All of the above",
   },
 ];
+
+//  10 multiple-choice quiz questions on Equality Operators (== vs ===) in JavaScript,
+const quizQuestions = [
+  {
+    id: 1,
+    question: "What is the main difference between `==` and `===` in JavaScript?",
+    options: [
+      "`==` checks both type and value, `===` only checks value",
+      "`==` only checks type, `===` checks value",
+      "`==` checks value with coercion, `===` checks value and type without coercion",
+      "They are exactly the same",
+    ],
+    correct: "`==` checks value with coercion, `===` checks value and type without coercion",
+  },
+  {
+    id: 2,
+    question: "What is the result of `'5' == 5`?",
+    options: ["true", "false", "undefined", "NaN"],
+    correct: "true",
+  },
+  {
+    id: 3,
+    question: "What is the result of `'5' === 5`?",
+    options: ["true", "false", "undefined", "NaN"],
+    correct: "false",
+  },
+  {
+    id: 4,
+    question: "What is the result of `null == undefined`?",
+    options: ["true", "false", "null", "error"],
+    correct: "true",
+  },
+  {
+    id: 5,
+    question: "What is the result of `null === undefined`?",
+    options: ["true", "false", "null", "error"],
+    correct: "false",
+  },
+  {
+    id: 6,
+    question: "Which of these expressions returns `true`?",
+    options: [
+      "'0' === 0",
+      "0 == false",
+      "'true' == true",
+      "null === undefined",
+    ],
+    correct: "0 == false",
+  },
+  {
+    id: 7,
+    question: "What is the output of `false === 0`?",
+    options: ["true", "false", "undefined", "NaN"],
+    correct: "false",
+  },
+  {
+    id: 8,
+    question: "Which comparison uses strict equality?",
+    options: ["==", "===", "!=", "!=="],
+    correct: "===",
+  },
+  {
+    id: 9,
+    question: "Why is `===` preferred over `==` in most cases?",
+    options: [
+      "Because it’s faster",
+      "Because it allows type coercion",
+      "Because it avoids unexpected type conversions",
+      "Because it returns strings",
+    ],
+    correct: "Because it avoids unexpected type conversions",
+  },
+  {
+    id: 10,
+    question: "What is the result of `'0' == false`?",
+    options: ["true", "false", "0", "undefined"],
+    correct: "true",
+  },
+];
