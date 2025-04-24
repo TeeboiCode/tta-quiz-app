@@ -787,3 +787,138 @@ const quizQuestions1 = [
   },
 ];
 
+//
+
+const quizQuestions = [
+  {
+    id: 1,
+    question: "What is JavaScript primarily used for in web development?",
+    options: ["Styling web pages", "Creating server hardware", "Adding interactivity to websites", "Database management"],
+    correct: "Adding interactivity to websites",
+  },
+  {
+    id: 2,
+    question: "Which tag is used to include JavaScript in an HTML file?",
+    options: ["<js>", "<javascript>", "<script>", "<code>"],
+    correct: "<script>",
+  },
+  {
+    id: 3,
+    question: "Where does JavaScript run by default?",
+    options: ["Inside a compiler", "In the browser", "In a database", "Only on a server"],
+    correct: "In the browser",
+  },
+  {
+    id: 4,
+    question: "Which tool allows JavaScript to run outside the browser?",
+    options: ["WordPress", "Node.js", "React", "HTML"],
+    correct: "Node.js",
+  },
+  {
+    id: 5,
+    question: "Which function displays a message in a popup alert box?",
+    options: ["console.log()", "alert()", "popup()", "msg()"],
+    correct: "alert()",
+  },
+  {
+    id: 6,
+    question: "Which method prints output to the browser console?",
+    options: ["print()", "alert()", "console.log()", "log.print()"],
+    correct: "console.log()",
+  },
+  {
+    id: 7,
+    question: "Which attribute is used in the <script> tag to load an external JS file?",
+    options: ["href", "src", "link", "file"],
+    correct: "src",
+  },
+  {
+    id: 8,
+    question: "What file extension does a JavaScript file typically use?",
+    options: [".html", ".css", ".js", ".json"],
+    correct: ".js",
+  },
+  {
+    id: 9,
+    question: "Which of the following is NOT a way to run JavaScript?",
+    options: ["In the browser console", "With Node.js", "Inside an HTML file", "In a Word document"],
+    correct: "In a Word document",
+  },
+  {
+    id: 10,
+    question: "What does 'interpreted language' mean?",
+    options: [
+      "It must be compiled before running",
+      "It runs line by line without compiling",
+      "It requires special hardware",
+      "It only runs on Linux",
+    ],
+    correct: "It runs line by line without compiling",
+  },
+  {
+    id: 11,
+    question: "What is JavaScript primarily used for in web development?",
+    options: ["Styling web pages", "Creating server hardware", "Adding interactivity to websites", "Database management"],
+    correct: "Adding interactivity to websites",
+  },
+  {
+    id: 12,
+    question: "Which tag is used to include JavaScript in an HTML file?",
+    options: ["<js>", "<javascript>", "<script>", "<code>"],
+    correct: "<script>",
+  },
+  {
+    id: 13,
+    question: "Where does JavaScript run by default?",
+    options: ["Inside a compiler", "In the browser", "In a database", "Only on a server"],
+    correct: "In the browser",
+  },
+  {
+    id: 14,
+    question: "Which tool allows JavaScript to run outside the browser?",
+    options: ["WordPress", "Node.js", "React", "HTML"],
+    correct: "Node.js",
+  },
+  {
+    id: 15,
+    question: "Which function displays a message in a popup alert box?",
+    options: ["console.log()", "alert()", "popup()", "msg()"],
+    correct: "alert()",
+  },
+  {
+    id: 16,
+    question: "Which method prints output to the browser console?",
+    options: ["print()", "alert()", "console.log()", "log.print()"],
+    correct: "console.log()",
+  },
+  {
+    id: 17,
+    question: "Which attribute is used in the <script> tag to load an external JS file?",
+    options: ["href", "src", "link", "file"],
+    correct: "src",
+  },
+  {
+    id: 18,
+    question: "What file extension does a JavaScript file typically use?",
+    options: [".html", ".css", ".js", ".json"],
+    correct: ".js",
+  },
+  {
+    id: 19,
+    question: "Which of the following is NOT a way to run JavaScript?",
+    options: ["In the browser console", "With Node.js", "Inside an HTML file", "In a Word document"],
+    correct: "In a Word document",
+  },
+  {
+    id: 20,
+    question: "What does 'interpreted language' mean?",
+    options: [
+      "It must be compiled before running",
+      "It runs line by line without compiling",
+      "It requires special hardware",
+      "It only runs on Linux",
+    ],
+    correct: "It runs line by line without compiling",
+  }
+];
+
