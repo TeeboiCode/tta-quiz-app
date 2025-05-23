@@ -185,7 +185,7 @@ function startCountDown() {
 // ======================
 
 
-const firstEvaluation =[
+const quizQuestions =[
    {
     id: 1,
     question: "What is the data type of `true` in JavaScript?",
