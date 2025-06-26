@@ -179,6 +179,194 @@ function startCountDown() {
 }
 
 //// Questions 
+const quizQuestions = [
+  // ===== Array Questions =====
+  {
+    id: 1,
+    question: "Which method adds one or more elements to the end of an array?",
+    options: ["push()", "pop()", "shift()", "unshift()"],
+    correct: "push()",
+  },
+  {
+    id: 2,
+    question: "What does the `pop()` method do?",
+    options: ["Adds an element to the beginning", "Removes the first element", "Removes the last element", "Adds an element to the end"],
+    correct: "Removes the last element",
+  },
+  {
+    id: 3,
+    question: "Which method returns a shallow copy of a portion of an array?",
+    options: ["slice()", "splice()", "split()", "join()"],
+    correct: "slice()",
+  },
+  {
+    id: 4,
+    question: "What will `Array.isArray([])` return?",
+    options: ["true", "false", "undefined", "null"],
+    correct: "true",
+  },
+  {
+    id: 5,
+    question: "How can you find the length of an array `arr`?",
+    options: ["arr.size", "arr.count", "arr.length", "arr.getLength()"],
+    correct: "arr.length",
+  },
+  {
+    id: 6,
+    question: "Which method merges two or more arrays?",
+    options: ["concat()", "merge()", "join()", "append()"],
+    correct: "concat()",
+  },
+  {
+    id: 7,
+    question: "What does `arr.indexOf(5)` do?",
+    options: ["Adds 5 to array", "Returns index of value 5", "Removes 5 from array", "Replaces 5"],
+    correct: "Returns index of value 5",
+  },
+  {
+    id: 8,
+    question: "What is the result of `[1,2,3].includes(2)`?",
+    options: ["true", "false", "undefined", "null"],
+    correct: "true",
+  },
+  {
+    id: 9,
+    question: "Which array method executes a function on each element?",
+    options: ["map()", "filter()", "reduce()", "indexOf()"],
+    correct: "map()",
+  },
+  {
+    id: 10,
+    question: "Which method filters array elements based on a condition?",
+    options: ["filter()", "map()", "reduce()", "every()"],
+    correct: "filter()",
+  },
+
+  // ===== Object Questions =====
+  {
+    id: 11,
+    question: "How do you access the property 'name' in object `person`?",
+    options: ["person.name", "person(name)", "person->name", "person::name"],
+    correct: "person.name",
+  },
+  {
+    id: 12,
+    question: "How do you delete a property from a JavaScript object?",
+    options: ["remove person.name", "delete person.name", "unset person.name", "cut person.name"],
+    correct: "delete person.name",
+  },
+  {
+    id: 13,
+    question: "Which keyword is used to define an object?",
+    options: ["const", "let", "var", "All of the above"],
+    correct: "All of the above",
+  },
+  {
+    id: 14,
+    question: "What does `Object.keys(obj)` return?",
+    options: ["Object values", "Array of keys", "Length of object", "Last key"],
+    correct: "Array of keys",
+  },
+  {
+    id: 15,
+    question: "How to check if an object has a property?",
+    options: ["hasKey()", "includes()", "hasOwnProperty()", "checkProp()"],
+    correct: "hasOwnProperty()",
+  },
+  {
+    id: 16,
+    question: "What does `Object.values(obj)` return?",
+    options: ["Array of values", "Array of keys", "String of keys", "Object itself"],
+    correct: "Array of values",
+  },
+  {
+    id: 17,
+    question: "How do you create an object with no prototype?",
+    options: ["Object.create()", "Object.make()", "Object()", "Object.create(null)"],
+    correct: "Object.create(null)",
+  },
+  {
+    id: 18,
+    question: "Which method merges properties of objects?",
+    options: ["Object.merge()", "Object.assign()", "Object.concat()", "Object.copy()"],
+    correct: "Object.assign()",
+  },
+  {
+    id: 19,
+    question: "What is the type of `typeof {}`?",
+    options: ["array", "object", "function", "null"],
+    correct: "object",
+  },
+  {
+    id: 20,
+    question: "How can you iterate over all keys in an object?",
+    options: ["for of", "for in", "foreach", "loop"],
+    correct: "for in",
+  },
+
+  // ===== Function Questions =====
+  {
+    id: 21,
+    question: "How do you define a function in JavaScript?",
+    options: ["function myFunc(){}", "def myFunc(){}", "fn myFunc(){}", "fun myFunc(){}"],
+    correct: "function myFunc(){}",
+  },
+  {
+    id: 22,
+    question: "What is a function expression?",
+    options: ["A function defined inside a loop", "A named function", "An anonymous function assigned to a variable", "A built-in function"],
+    correct: "An anonymous function assigned to a variable",
+  },
+  {
+    id: 23,
+    question: "What does `return` do in a function?",
+    options: ["Prints a value", "Stops function execution and returns a value", "Stores a value", "Calls another function"],
+    correct: "Stops function execution and returns a value",
+  },
+  {
+    id: 24,
+    question: "Which keyword declares an arrow function?",
+    options: ["arrow", "=>", "lambda", "->"],
+    correct: "=>",
+  },
+  {
+    id: 25,
+    question: "How do you call a function named `add`?",
+    options: ["call add", "add()", "call(add)", "execute add"],
+    correct: "add()",
+  },
+  {
+    id: 26,
+    question: "What does a callback function mean?",
+    options: ["Function that runs only once", "Function passed into another function", "A built-in function", "A recursive function"],
+    correct: "Function passed into another function",
+  },
+  {
+    id: 27,
+    question: "Which of the following defines an arrow function correctly?",
+    options: ["const add = () => {}", "function = () => {}", "=> add = () {}", "function add => ()"],
+    correct: "const add = () => {}",
+  },
+  {
+    id: 28,
+    question: "What is a pure function?",
+    options: ["A function that returns no value", "A function that depends on global variables", "A function that returns the same output for same input", "A function that modifies its input"],
+    correct: "A function that returns the same output for same input",
+  },
+  {
+    id: 29,
+    question: "What will `typeof function() {}` return?",
+    options: ["function", "object", "method", "undefined"],
+    correct: "function",
+  },
+  {
+    id: 30,
+    question: "Which function method allows setting the `this` value?",
+    options: ["bind()", "set()", "call()", "Both call() and bind()"],
+    correct: "Both call() and bind()",
+  },
+];
+
 
 
 
