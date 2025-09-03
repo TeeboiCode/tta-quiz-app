@@ -195,6 +195,286 @@ const quizQuestions = [
   },
   {
     id: 3,
+    question: "Which of the following is true about `var`?",
+    options: [
+      "It is block-scoped",
+      "It is function-scoped",
+      "It cannot be redeclared",
+      "It is always constant",
+    ],
+    correct: "It is function-scoped",
+  },
+  {
+    id: 4,
+    question: "What will happen if you declare a variable without assigning a value?",
+    options: ["It will throw an error", "It will be undefined", "It will be null", "It will be false"],
+    correct: "It will be undefined",
+  },
+  {
+    id: 5,
+    question: "Which of the following is NOT a valid variable name?",
+    options: ["_num", "$value", "123abc", "firstName"],
+    correct: "123abc",
+  },
+  {
+    id: 6,
+    question: "Which statement is correct about `const` variables?",
+    options: [
+      "They must be initialized at declaration",
+      "They can be redeclared",
+      "They are block-scoped and must be assigned later",
+      "They cannot store objects",
+    ],
+    correct: "They must be initialized at declaration",
+  },
+  {
+    id: 7,
+    question: "Which keyword is used to declare variables introduced in ES6?",
+    options: ["define", "dim", "let", "constant"],
+    correct: "let",
+  },
+
+  // ===== Primitive Data Types =====
+  {
+    id: 8,
+    question: "Which of these is NOT a primitive data type in JavaScript?",
+    options: ["Number", "Boolean", "Object", "String"],
+    correct: "Object",
+  },
+  {
+    id: 9,
+    question: "What is the type of `null` in JavaScript?",
+    options: ["null", "undefined", "object", "boolean"],
+    correct: "object",
+  },
+  {
+    id: 10,
+    question: "What will `typeof NaN` return?",
+    options: ["NaN", "number", "undefined", "null"],
+    correct: "number",
+  },
+  {
+    id: 11,
+    question: "What is the result of `typeof true`?",
+    options: ["boolean", "string", "number", "object"],
+    correct: "boolean",
+  },
+  {
+    id: 12,
+    question: "Which primitive type represents unique identifiers?",
+    options: ["BigInt", "Symbol", "String", "Object"],
+    correct: "Symbol",
+  },
+  {
+    id: 13,
+    question: "What will `typeof undefined` return?",
+    options: ["null", "undefined", "string", "object"],
+    correct: "undefined",
+  },
+  {
+    id: 14,
+    question: "Which data type is used for whole numbers and decimals in JavaScript?",
+    options: ["Float", "Double", "Number", "Int"],
+    correct: "Number",
+  },
+  {
+    id: 15,
+    question: "What is the result of `typeof '42'`?",
+    options: ["string", "number", "boolean", "undefined"],
+    correct: "string",
+  },
+
+  // ===== Loops =====
+  {
+    id: 16,
+    question: "Which loop is best when the number of iterations is known?",
+    options: ["while", "for", "do...while", "forEach"],
+    correct: "for",
+  },
+  {
+    id: 17,
+    question: "Which keyword is used to stop a loop immediately?",
+    options: ["stop", "break", "exit", "continue"],
+    correct: "break",
+  },
+  {
+    id: 18,
+    question: "Which keyword is used to skip the current iteration in a loop?",
+    options: ["skip", "exit", "continue", "break"],
+    correct: "continue",
+  },
+  {
+    id: 19,
+    question: "What will be the output of: `for(let i=0; i<3; i++){ console.log(i); }`?",
+    options: ["1 2 3", "0 1 2", "0 1 2 3", "3 2 1"],
+    correct: "0 1 2",
+  },
+  {
+    id: 20,
+    question: "Which loop always executes its body at least once?",
+    options: ["for", "while", "do...while", "for of"],
+    correct: "do...while",
+  },
+  {
+    id: 21,
+    question: "What will happen with: `while(false){ console.log('Hi'); }`?",
+    options: ["Hi will print once", "Hi will print infinitely", "Nothing will print", "Error will occur"],
+    correct: "Nothing will print",
+  },
+  {
+    id: 22,
+    question: "What is the initial value of `i` here: `for(let i=1; i<=3; i++){}`?",
+    options: ["0", "1", "undefined", "null"],
+    correct: "1",
+  },
+  {
+    id: 23,
+    question: "Which loop is more suitable for iterating arrays directly?",
+    options: ["for", "for...in", "for...of", "while"],
+    correct: "for...of",
+  },
+  {
+    id: 24,
+    question: "What will this code output: `let i=0; while(i<3){ console.log(i); i++; }`?",
+    options: ["1 2 3", "0 1 2", "0 1 2 3", "2 1 0"],
+    correct: "0 1 2",
+  },
+  {
+    id: 25,
+    question: "Which loop is best for when the exit condition may not be known at the start?",
+    options: ["for", "while", "forEach", "for...of"],
+    correct: "while",
+  },
+
+  // ===== String Methods =====
+  {
+    id: 26,
+    question: "What does `'hello'.toUpperCase()` return?",
+    options: ["HELLO", "hello", "Error", "Hello"],
+    correct: "HELLO",
+  },
+  {
+    id: 27,
+    question: "What does `'JavaScript'.charAt(4)` return?",
+    options: ["J", "a", "S", "S"],
+    correct: "S",
+  },
+  {
+    id: 28,
+    question: "What is the result of `'hello world'.slice(0,5)`?",
+    options: ["world", "hello", "hell", "ello"],
+    correct: "hello",
+  },
+  {
+    id: 29,
+    question: "What does `'cat'.includes('a')` return?",
+    options: ["true", "false", "undefined", "null"],
+    correct: "true",
+  },
+  {
+    id: 30,
+    question: "What is the length of the string `'OpenAI'`?",
+    options: ["6", "5", "7", "Error"],
+    correct: "6",
+  },
+
+  // ===== Number Methods =====
+  {
+    id: 31,
+    question: "What does `Number.isInteger(10.5)` return?",
+    options: ["true", "false", "undefined", "Error"],
+    correct: "false",
+  },
+  {
+    id: 32,
+    question: "What is the result of `parseInt('42px')`?",
+    options: ["42", "NaN", "px", "null"],
+    correct: "42",
+  },
+
+  // ===== Boolean Methods =====
+  {
+    id: 33,
+    question: "What is the result of `Boolean(0)`?",
+    options: ["true", "false", "undefined", "null"],
+    correct: "false",
+  },
+  {
+    id: 34,
+    question: "What does `Boolean(' ')` (a string with space) return?",
+    options: ["false", "true", "undefined", "Error"],
+    correct: "true",
+  },
+
+  // ===== Math Methods =====
+  {
+    id: 35,
+    question: "What does `Math.floor(4.7)` return?",
+    options: ["4", "5", "4.7", "Error"],
+    correct: "4",
+  },
+  {
+    id: 36,
+    question: "What does `Math.random()` return?",
+    options: [
+      "A random integer between 0 and 10",
+      "A random decimal between 0 and 1",
+      "Always 0",
+      "Always 1",
+    ],
+    correct: "A random decimal between 0 and 1",
+  },
+  {
+    id: 37,
+    question: "What is the result of `Math.max(2, 8, 5)`?",
+    options: ["2", "8", "5", "undefined"],
+    correct: "8",
+  },
+
+  // ===== Functions =====
+  {
+    id: 38,
+    question: "Which keyword is used to declare a function?",
+    options: ["define", "func", "function", "method"],
+    correct: "function",
+  },
+  {
+    id: 39,
+    question: "What will this function return? `function add(a,b){ return a+b; } add(2,3);`",
+    options: ["23", "5", "undefined", "NaN"],
+    correct: "5",
+  },
+  {
+    id: 40,
+    question: "Which of the following is an arrow function?",
+    options: [
+      "let sum = (a,b) => a+b;",
+      "function sum(a,b){ return a+b; }",
+      "sum(a,b){ return a+b; }",
+      "let sum = function a+b;",
+    ],
+    correct: "let sum = (a,b) => a+b;",
+  },
+];
+
+
+//// Questions 
+const quizQuestionsVaribaleANDdata = [
+  // ===== Variable Declaration & Data Types =====
+  {
+    id: 1,
+    question: "Which keyword is used to declare a variable that cannot be reassigned?",
+    options: ["let", "var", "const", "static"],
+    correct: "const",
+  },
+  {
+    id: 2,
+    question: "Which of the following is a correct variable declaration using `let`?",
+    options: ["let 1num = 10;", "let num = 10;", "let-num = 10;", "let = 10;"],
+    correct: "let num = 10;",
+  },
+  {
+    id: 3,
     question: "What is the default value of an uninitialized variable in JavaScript?",
     options: ["null", "undefined", "0", "false"],
     correct: "undefined",
